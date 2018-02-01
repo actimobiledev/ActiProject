@@ -62,12 +62,11 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout llNewProject;
     LinearLayout llExistingProject;
 
-    String[] arraySpinner =  new String[]{"Category 1", "Category 2", "Category 3", "Category 4"};
+    String[] arraySpinner = new String[]{"Category 1", "Category 2", "Category 3", "Category 4"};
     String[] arraySpinner2 = new String[]{"Line 1", "Line 2", "Line 3", "Line 4"};
     String[] arraySpinner3 = new String[]{"Tonnage 1", "Tonnage 2", "Tonnage 3", "Tonnage 4"};
     String[] arraySpinner4 = new String[]{"Project Id 1", "Project Id 2", "Project Id 3", "Project Id 4"};
     String[] arraySpinner5 = new String[]{"Product Model 1", "Product Model 2", "Product Model 3", "Product Model 4"};
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,15 +78,13 @@ public class MainActivity extends AppCompatActivity {
         initListener();
         isLogin();
         initDrawer();
-
     }
 
     private void initListener() {
-
         ivNavigation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                result.openDrawer ();
+                result.openDrawer();
 
             }
         });
@@ -103,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
         tvExistingProject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -122,10 +118,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent2 = new Intent(MainActivity.this, ProjectDetailActivity.class);
                 startActivity(intent2);
                 overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-
             }
         });
-
         et1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -171,7 +165,6 @@ public class MainActivity extends AppCompatActivity {
                             }
                         })
                         .show();
-
             }
         });
         et4.setOnClickListener(new View.OnClickListener() {
@@ -187,7 +180,6 @@ public class MainActivity extends AppCompatActivity {
                             }
                         })
                         .show();
-
             }
         });
         et5.setOnClickListener(new View.OnClickListener() {
@@ -207,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
     private void isLogin() {
         userDetailsPref = UserDetailsPref.getInstance();
         if (userDetailsPref.getStringPref(MainActivity.this, UserDetailsPref.LOGIN_KEY).length() == 0) {
@@ -216,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
     }
+
     private void initView() {
         clMain = (CoordinatorLayout) findViewById(R.id.clMain);
         ivNavigation = (ImageView) findViewById(R.id.ivNavigation);
@@ -231,14 +225,12 @@ public class MainActivity extends AppCompatActivity {
         llNewProject = (LinearLayout) findViewById(R.id.llNewProject);
         llExistingProject = (LinearLayout) findViewById(R.id.llExistProject);
     }
-
     private void initData() {
         userDetailsPref = UserDetailsPref.getInstance();
         progressDialog = new ProgressDialog(this);
         Utils.setTypefaceToAllViews(this, tvHeading);
 
     }
-
 
     @Override
     protected void onResume() {
@@ -446,7 +438,8 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    private void dialog(String[] arraySpinner, String s) {}
+    private void dialog(String[] arraySpinner, String s) {
+    }
 
 
 }
