@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout llNewProject;
     LinearLayout llExistingProject;
 
-    String[] arraySpinner = new String[]{"Category 1", "Category 2", "Category 3", "Category 4"};
+    String[] arraySpinner =  new String[]{"Category 1", "Category 2", "Category 3", "Category 4"};
     String[] arraySpinner2 = new String[]{"Line 1", "Line 2", "Line 3", "Line 4"};
     String[] arraySpinner3 = new String[]{"Tonnage 1", "Tonnage 2", "Tonnage 3", "Tonnage 4"};
     String[] arraySpinner4 = new String[]{"Project Id 1", "Project Id 2", "Project Id 3", "Project Id 4"};
@@ -133,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
                             }
                         })
                         .show();
-
             }
         });
         et2.setOnClickListener(new View.OnClickListener() {

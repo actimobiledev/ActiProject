@@ -101,63 +101,6 @@ public class BarChartFragment extends Fragment {
 
     private void setBarChartValue() {
 
-       /* ArrayList<BarEntry> bargroup1 = new ArrayList<>();
-        bargroup1.add(new BarEntry( 8.6f,1));
-        bargroup1.add(new BarEntry(8.2f, 2));
-        bargroup1.add(new BarEntry(7.9f, 3));
-        bargroup1.add(new BarEntry(7.3f, 4));
-        bargroup1.add(new BarEntry(6.2f, 5));
-        bargroup1.add(new BarEntry(5.9f, 6));
-        bargroup1.add(new BarEntry(5.4f, 7));
-        bargroup1.add(new BarEntry(5.1f, 8));
-
-      *//*  bardataset= new BarDataSet(bargroup1, "Bar Group 1");
-        bardataset.setColors(ColorTemplate.VORDIPLOM_COLORS);*//*
-
-        XAxis xAxis = barChart.getXAxis();
-        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-
-
-        xAxis.setDrawGridLines(false);
-        barChart.getAxisRight().setDrawGridLines(false);
-
-
-
-        barChart.setDrawBarShadow(false);
-        barChart.setDrawGridBackground(false);
-        barChart.getDescription().setEnabled(false);
-        barChart.getLegend().setEnabled(false);
-        barChart.setPinchZoom(false);
-
-
-        YAxis yAxis = barChart.getAxisLeft();
-       // yAxis.setSpaceTop(25f);
-        yAxis.setDrawGridLines(false);
-        yAxis = barChart.getAxisRight();
-        yAxis.setDrawGridLines(false);
-
-
-
-
-
-
-
-
-        BarDataSet set1 = new BarDataSet(bargroup1, "");
-        set1.setValues(bargroup1);
-        set1.setDrawValues(true);
-        set1.setColors(getResources().getColor(R.color.primary));
-
-
-
-        BarData data = new BarData(set1);
-        data.setBarWidth(0.2f);
-        data.setValueFormatter(new LargeValueFormatter());
-        barChart.setData(data);
-
-        barChart.setFitBars(false);
-*/
-
         ArrayList<BarEntry> bargroup1 = new ArrayList<>();
         bargroup1.add(new BarEntry(8.6f, 0));
         bargroup1.add(new BarEntry(8.2f, 1));
