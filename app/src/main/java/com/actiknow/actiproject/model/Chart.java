@@ -6,12 +6,13 @@ package com.actiknow.actiproject.model;
 
 public class Chart {
     int id;
-    String chart_title, radius;
+    String chart_title, radius,percentage;
 
-    public Chart(int id, String chart_title, String radius) {
+    public Chart(int id, String chart_title, String radius,String percentage) {
         this.id = id;
         this.chart_title = chart_title;
         this.radius = radius;
+        this.percentage = percentage;
     }
 
     public int getId() {
@@ -36,5 +37,13 @@ public class Chart {
 
     public void setRadius(String radius) {
         this.radius = radius;
+    }
+
+    public String getPercentage() {
+        return percentage;
+    }
+
+    public void setPercentage(String percentage) {
+        this.percentage = percentage;
     }
 }

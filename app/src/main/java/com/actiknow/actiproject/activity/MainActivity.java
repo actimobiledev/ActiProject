@@ -4,34 +4,20 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.actiknow.actiproject.R;
-import com.actiknow.actiproject.adapter.ProductAdapter;
-import com.actiknow.actiproject.fragment.PieChartFragment;
-import com.actiknow.actiproject.model.Product;
 import com.actiknow.actiproject.utils.SetTypeFace;
 import com.actiknow.actiproject.utils.UserDetailsPref;
 import com.actiknow.actiproject.utils.Utils;
@@ -55,9 +41,6 @@ import com.mikepenz.materialdrawer.util.AbstractDrawerImageLoader;
 import com.mikepenz.materialdrawer.util.DrawerImageLoader;
 import com.mikepenz.materialdrawer.util.DrawerUIUtils;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MainActivity extends AppCompatActivity {
     private AccountHeader headerResult = null;
     private Drawer result = null;
@@ -79,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout llNewProject;
     LinearLayout llExistingProject;
 
-    String[] arraySpinner = new String[]{"Category 1", "Category 2", "Category 3", "Category 4"};
+    String[] arraySpinner =  new String[]{"Category 1", "Category 2", "Category 3", "Category 4"};
     String[] arraySpinner2 = new String[]{"Line 1", "Line 2", "Line 3", "Line 4"};
     String[] arraySpinner3 = new String[]{"Tonnage 1", "Tonnage 2", "Tonnage 3", "Tonnage 4"};
     String[] arraySpinner4 = new String[]{"Project Id 1", "Project Id 2", "Project Id 3", "Project Id 4"};
@@ -161,26 +144,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-        et1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                new MaterialDialog.Builder(MainActivity.this)
-                        .title("Select Product Category")
-                        .items(arraySpinner)
-                        .itemsCallback(new MaterialDialog.ListCallback() {
-                            @Override
-                            public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
-                                et1.setText(text);
-                            }
-                        })
-                        .show();
-
-            }
-        });
-
-
         et2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -197,8 +160,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
         et3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -215,8 +176,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
         et4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -233,7 +192,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
         et5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -251,8 +209,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
     private void isLogin() {
         userDetailsPref = UserDetailsPref.getInstance();
         if (userDetailsPref.getStringPref(MainActivity.this, UserDetailsPref.LOGIN_KEY).length() == 0) {
@@ -262,7 +218,6 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
     }
-
     private void initView() {
         clMain = (CoordinatorLayout) findViewById(R.id.clMain);
         ivNavigation = (ImageView) findViewById(R.id.ivNavigation);

@@ -1,7 +1,6 @@
 package com.actiknow.actiproject.activity;
 
 import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -15,7 +14,6 @@ import android.widget.TextView;
 
 import com.actiknow.actiproject.R;
 import com.actiknow.actiproject.fragment.BarChartFragment;
-import com.actiknow.actiproject.fragment.PieChartFragment;
 import com.actiknow.actiproject.utils.Utils;
 
 import java.util.ArrayList;
