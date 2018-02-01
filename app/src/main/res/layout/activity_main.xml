@@ -192,7 +192,8 @@
                 android:background="@drawable/button_hollow"
                 android:padding="10dp"
                 android:hint="Select Project ID"
-                android:textSize="@dimen/text_size_medium"></EditText>
+                android:textSize="@dimen/text_size_medium"
+                android:focusable="false"></EditText>
 
 
             <EditText
@@ -204,7 +205,8 @@
                 android:background="@drawable/button_hollow"
                 android:padding="10dp"
                 android:hint="Select Product Model(s)"
-                android:textSize="@dimen/text_size_medium"></EditText>
+                android:textSize="@dimen/text_size_medium"
+                android:focusable="false"></EditText>
 
 
         </LinearLayout>

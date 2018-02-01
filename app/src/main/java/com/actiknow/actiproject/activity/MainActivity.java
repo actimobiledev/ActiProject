@@ -79,13 +79,11 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout llNewProject;
     LinearLayout llExistingProject;
 
-    String[] arraySpinner = new String[] {"Category 1", "Category 2", "Category 3", "Category 4"};
-    String[] arraySpinner2 = new String[] {"Line 1", "Line 2", "Line 3", "Line 4"};
-    String[] arraySpinner3 = new String[] {"Tonnage 1", "Tonnage 2", "Tonnage 3", "Tonnage 4"};
-    String[] arraySpinner4 = new String[] {"Project Id 1", "Project Id 2", "Project Id 3", "Project Id 4"};
-    String[] arraySpinner5 = new String[] {"Product Model 1", "Product Model 2", "Product Model 3", "Product Model 4"};
-
-
+    String[] arraySpinner = new String[]{"Category 1", "Category 2", "Category 3", "Category 4"};
+    String[] arraySpinner2 = new String[]{"Line 1", "Line 2", "Line 3", "Line 4"};
+    String[] arraySpinner3 = new String[]{"Tonnage 1", "Tonnage 2", "Tonnage 3", "Tonnage 4"};
+    String[] arraySpinner4 = new String[]{"Project Id 1", "Project Id 2", "Project Id 3", "Project Id 4"};
+    String[] arraySpinner5 = new String[]{"Product Model 1", "Product Model 2", "Product Model 3", "Product Model 4"};
 
 
     @Override
@@ -112,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });*/
-
         tvNewProject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -269,17 +266,17 @@ public class MainActivity extends AppCompatActivity {
     private void initView() {
         clMain = (CoordinatorLayout) findViewById(R.id.clMain);
         ivNavigation = (ImageView) findViewById(R.id.ivNavigation);
-        tvHeading=(TextView)findViewById(R.id.tvHeading);
-        tvNewProject=(TextView)findViewById(R.id.tvNewProject);
-        tvExistingProject=(TextView)findViewById(R.id.tvExistingProject);
-        tvNext=(TextView)findViewById(R.id.tvNext);
-        et1=(EditText)findViewById(R.id.et1);
-        et2=(EditText)findViewById(R.id.et2);
-        et3=(EditText)findViewById(R.id.et3);
-        et4=(EditText)findViewById(R.id.et4);
-        et5=(EditText)findViewById(R.id.et5);
-        llNewProject=(LinearLayout)findViewById(R.id.llNewProject);
-        llExistingProject=(LinearLayout)findViewById(R.id.llExistProject);
+        tvHeading = (TextView) findViewById(R.id.tvHeading);
+        tvNewProject = (TextView) findViewById(R.id.tvNewProject);
+        tvExistingProject = (TextView) findViewById(R.id.tvExistingProject);
+        tvNext = (TextView) findViewById(R.id.tvNext);
+        et1 = (EditText) findViewById(R.id.et1);
+        et2 = (EditText) findViewById(R.id.et2);
+        et3 = (EditText) findViewById(R.id.et3);
+        et4 = (EditText) findViewById(R.id.et4);
+        et5 = (EditText) findViewById(R.id.et5);
+        llNewProject = (LinearLayout) findViewById(R.id.llNewProject);
+        llExistingProject = (LinearLayout) findViewById(R.id.llExistProject);
     }
 
     private void initData() {
@@ -296,12 +293,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initAdapter() {
-
-
-
-
-
-
     }
 
     private void initDrawer() {
@@ -453,8 +444,8 @@ public class MainActivity extends AppCompatActivity {
 //                .withItemAnimator (new AlphaCrossFadeAnimator ())
                 .addDrawerItems(
                         new PrimaryDrawerItem().withName("Dashboard").withIcon(FontAwesome.Icon.faw_tachometer).withIdentifier(1).withTypeface(SetTypeFace.getTypeface(MainActivity.this)).withSelectable(false),
-                       // new PrimaryDrawerItem().withName("Accepted").withIcon(FontAwesome.Icon.faw_arrow_circle_right).withIdentifier(2).withSelectable(false).withTypeface(SetTypeFace.getTypeface(MainActivity.this)),
-                       // new PrimaryDrawerItem().withName("Rejected").withIcon(FontAwesome.Icon.faw_arrow_circle_left).withIdentifier(3).withSelectable(false).withTypeface(SetTypeFace.getTypeface(MainActivity.this)),
+                        // new PrimaryDrawerItem().withName("Accepted").withIcon(FontAwesome.Icon.faw_arrow_circle_right).withIdentifier(2).withSelectable(false).withTypeface(SetTypeFace.getTypeface(MainActivity.this)),
+                        // new PrimaryDrawerItem().withName("Rejected").withIcon(FontAwesome.Icon.faw_arrow_circle_left).withIdentifier(3).withSelectable(false).withTypeface(SetTypeFace.getTypeface(MainActivity.this)),
                         new PrimaryDrawerItem().withName("Sign Out").withIcon(FontAwesome.Icon.faw_sign_out).withIdentifier(4).withSelectable(false).withTypeface(SetTypeFace.getTypeface(MainActivity.this))
 
                 )
@@ -502,13 +493,7 @@ public class MainActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    private void dialog(String[] arraySpinner, String s){
-
-    }
-
-
-
-
+    private void dialog(String[] arraySpinner, String s) {}
 
 
 }

@@ -126,7 +126,7 @@ public class ProjectDetailActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        for (int i=0; i<4;i++){
+        for (int i=0; i<1;i++){
             adapter.addFragment(new PieChartFragment(), fragmentList.get(i));
         }
 
