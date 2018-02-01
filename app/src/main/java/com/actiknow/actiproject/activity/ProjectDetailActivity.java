@@ -24,8 +24,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProjectDetailActivity extends AppCompatActivity {
-
-
     UserDetailsPref userDetailsPref;
     CoordinatorLayout clMain;
     ProgressDialog progressDialog;
@@ -39,7 +37,6 @@ public class ProjectDetailActivity extends AppCompatActivity {
     TextView tvHeading;
     ImageView ivBack;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,10 +45,7 @@ public class ProjectDetailActivity extends AppCompatActivity {
         initData();
         initAdapter();
         initListener();
-
-
     }
-
     private void initListener() {
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,12 +63,10 @@ public class ProjectDetailActivity extends AppCompatActivity {
         tvHeading = (TextView) findViewById(R.id.tvHeading);
         ivBack = (ImageView) findViewById(R.id.ivNavigation);
     }
-
     private void initData() {
         userDetailsPref = UserDetailsPref.getInstance();
         progressDialog = new ProgressDialog(this);
         Utils.setTypefaceToAllViews(this, tvHeading);
-
     }
     @Override
     protected void onResume() {
@@ -94,7 +86,6 @@ public class ProjectDetailActivity extends AppCompatActivity {
         rvProductList.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         rvProductList.setItemAnimator(new DefaultItemAnimator());
         // rvProductList.addItemDecoration(new RecyclerViewMargin((int) Utils.pxFromDp(MainActivity.this, 16), (int) Utils.pxFromDp(MainActivity.this, 16), (int) Utils.pxFromDp(MainActivity.this, 16), (int) Utils.pxFromDp(MainActivity.this, 16), 1, 0, RecyclerViewMargin.LAYOUT_MANAGER_LINEAR, RecyclerViewMargin.ORIENTATION_VERTICAL));
-
 
         chartList.add(new Chart(1, "Technical Score", "62", "6.2"));
         chartList.add(new Chart(2, "Cost  Score", "73", "7.3"));

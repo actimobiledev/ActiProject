@@ -83,16 +83,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initListener() {
-        /*  jobsAdapter.SetOnItemClickListener(new ProductAdapter.OnItemClickListener() {
+
+        ivNavigation.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(View view, int position) {
-                Jobs jobs = jobsList.get(position);
-                android.app.FragmentTransaction ft = getFragmentManager().beginTransaction();
-                JobDetailFragment dialog = new JobDetailFragment().newInstance(arrayResponse, jobs.getId());
-                dialog.show(ft, "jobs");
+            public void onClick(View view) {
+                result.openDrawer ();
 
             }
-        });*/
+        });
         tvNewProject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
